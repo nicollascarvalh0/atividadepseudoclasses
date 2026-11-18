@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #24243a;
+  background: #f4f6fb;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.cabecalho {
+  min-height: 72px;
+  padding: 12px 8%;
+  background: #211f82;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cabecalho h2 {
+  font-size: 25px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover,
+.card a:hover {
+  color: #ffc857;
+}
+
+a:focus-visible {
+  outline: 3px solid #ffc857;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+.apresentacao {
+  min-height: 340px;
+  padding: 64px 8%;
+  background: linear-gradient(135deg, #413faf, #211f82);
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.apresentacao h1 {
+  max-width: 760px;
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+}
+
+.apresentacao p {
+  max-width: 680px;
+  margin-bottom: 26px;
+  font-size: 1.1rem;
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background: #fff;
+  color: #211f82;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.botao:hover {
+  background: #ffc857;
+  border-color: #ffc857;
+  color: #24243a;
+  transform: translateY(-2px);
+}
+
+.secao-cursos {
+  padding: 54px 8% 64px;
+  text-align: center;
+}
+
+.secao-cursos > h2 {
+  margin-bottom: 30px;
+  color: #211f82;
+  font-size: 2rem;
+}
+
+.container-cursos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.card {
+  flex: 1 1 260px;
+  max-width: 360px;
+  min-height: 250px;
+  padding: 26px;
+  border: 1px solid #dfe2ef;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgb(33 31 130 / 8%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:first-child {
+  border-top: 5px solid #ffc857;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgb(33 31 130 / 15%);
+}
+
+.card h3 {
+  margin-bottom: 12px;
+  color: #211f82;
+  font-size: 1.3rem;
+}
+
+.card p {
+  margin-bottom: 18px;
+}
+
+.card span {
+  margin-top: auto;
+  color: #5b5c70;
+  font-size: 0.9rem;
+}
+
+.card a {
+  margin-top: 12px;
+  color: #413faf;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer {
+  padding: 18px 8%;
+  background: #211f82;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 32px;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .cabecalho {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
+
+  .apresentacao {
+    padding: 50px 6%;
+  }
+
+  .secao-cursos {
+    padding: 42px 6%;
+  }
+}
